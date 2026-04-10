@@ -664,17 +664,17 @@ function RecommendationCard({
         </div>
 
         <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-lg ${isMain ? 'bg-white/10' : 'bg-white shadow-sm'}`}>
-              <DollarSign className={`w-4 h-4 ${isMain ? 'text-brand-primary' : 'text-brand-secondary'}`} />
+          <div className="flex items-center gap-4">
+            <div className={`p-3 rounded-xl ${isMain ? 'bg-white/10' : 'bg-white shadow-md'}`}>
+              <DollarSign className={`w-5 h-5 ${isMain ? 'text-brand-primary' : 'text-brand-secondary'}`} />
             </div>
-            <span className="text-sm font-bold">{recommendation.pricing}</span>
+            <span className="text-base font-bold">{recommendation.pricing}</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-lg ${isMain ? 'bg-white/10' : 'bg-white shadow-sm'}`}>
-              <ShieldCheck className={`w-4 h-4 ${isMain ? 'text-brand-primary' : 'text-brand-secondary'}`} />
+          <div className="flex items-center gap-4">
+            <div className={`p-3 rounded-xl ${isMain ? 'bg-white/10' : 'bg-white shadow-md'}`}>
+              <ShieldCheck className={`w-5 h-5 ${isMain ? 'text-brand-primary' : 'text-brand-secondary'}`} />
             </div>
-            <span className="text-sm font-bold">{recommendation.bestFor}</span>
+            <span className="text-base font-bold">{recommendation.bestFor}</span>
           </div>
           {recommendation.url && (
             <a 
@@ -695,10 +695,10 @@ function RecommendationCard({
         <div className="grid md:grid-cols-2 gap-10">
           {/* Capabilities */}
           <div>
-            <h4 className="text-[10px] uppercase tracking-[0.2em] font-black text-slate-400 mb-6">Capacidades</h4>
-            <div className="flex flex-wrap gap-2">
+            <h4 className="text-xs uppercase tracking-[0.2em] font-black text-slate-400 mb-6">Capacidades</h4>
+            <div className="flex flex-wrap gap-3">
               {recommendation.capabilities.map(cap => (
-                <span key={cap} className="bg-slate-100 text-brand-dark text-[11px] px-4 py-2 rounded-xl font-bold border border-slate-200/50">
+                <span key={cap} className="bg-slate-100 text-brand-dark text-sm px-6 py-3 rounded-2xl font-bold border border-slate-200/50 shadow-sm">
                   {cap}
                 </span>
               ))}
